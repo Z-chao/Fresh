@@ -1,5 +1,7 @@
 package com.xpet.fresh_pet;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -8,6 +10,7 @@ import android.text.InputType;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -19,6 +22,8 @@ import com.youth.banner.BannerConfig;
 
 import java.util.ArrayList;
 
+import static java.security.AccessController.getContext;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private RecyclerView rv_main;
@@ -27,6 +32,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private LinearLayout ll_homesearch;
     private EditText ed_homeseach;
     private Banner banner_home;
+    private ImageView iv_dingzhi;
+    private ImageView iv_kefu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +45,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void initView() {
         rv_main = (RecyclerView) findViewById(R.id.rv_main);
+        iv_dingzhi = (ImageView) findViewById(R.id.iv_dingzhi); //定制
+        iv_kefu = (ImageView) findViewById(R.id.iv_kefu); //客服
         rv_main.setLayoutManager(new LinearLayoutManager(MainActivity.this));
         ArrayList<String> data = new ArrayList<>();
         data.add("无敌神犬");
@@ -61,6 +70,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void setonListener() {
         ll_homesearch.setOnClickListener(this);
         ed_homeseach.setOnClickListener(this);
+        iv_dingzhi.setOnClickListener(this);
+        iv_kefu.setOnClickListener(this);
 
     }
 
@@ -96,7 +107,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 //搜索
 
                 break;
-            
+            case R.id.iv_dingzhi:
+                //定制
+                startActivity(new Intent(MainActivity.this, WebViewActivity.class));
+                break;
+            case R.id.iv_kefu:
+                //客服
+                String url="mqqwpa://im/chat?chat_type=wpa&uin=3209407802";
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+                break;
         }
 
     }

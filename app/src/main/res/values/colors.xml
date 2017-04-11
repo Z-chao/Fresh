@@ -5,4 +5,5 @@
     <color name="colorAccent">#FF4081</color>
     <color name="colorWhite">#ffff</color>
     <color name="banner">#e98642</color>
+    <color name="transparent">#0000</color>
 </resources>

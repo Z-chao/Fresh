@@ -39,4 +39,7 @@ dependencies {
     /*glide的引用*/
     compile 'com.github.bumptech.glide:glide:3.7.0'
     compile 'com.android.support:support-v4:19.1.0'
+    /* 悬浮图标的引用*/
+    compile 'com.android.support:design:25.1.1'
+
 }
