@@ -7,37 +7,82 @@
     tools:context="com.xpet.fresh_pet.ListActivity">
 
     <LinearLayout
+        android:id="@+id/ll_search"
         android:background="@color/colorWhite"
         android:layout_width="match_parent"
         android:orientation="horizontal"
-        android:layout_height="30dp">
+        android:layout_height="30dp"
+        android:weightSum="1">
 
         <ImageView
-            android:src="@mipmap/arrowleft"
-            android:layout_marginLeft="10dp"
+            android:id="@+id/iv_back"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_gravity="left|center_vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_marginLeft="5dp"
+            android:layout_weight="0.14"
+            android:scaleType="center"
+            android:src="@mipmap/arrowleft" />
 
         <EditText
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:background="@mipmap/seachback"
-            android:layout_marginLeft="20dp"
             android:layout_width="wrap_content"
             android:layout_height="match_parent" />
+
         <ImageView
 
-            android:layout_marginLeft="8dp"
-            android:layout_gravity="center_vertical"
-            android:src="@mipmap/seach"
+            android:id="@+id/iv_search"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="8dp"
+            android:src="@mipmap/seach" />
 
 
     </LinearLayout>
 
+    <!--下拉菜单-->
+    <com.lqr.dropdownLayout.LQRDropdownLayout
+        android:id="@+id/dl"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
 
+        android:layout_below="@+id/ll_search"
+        app:ddl_item_text_gravity="center"
+        app:ddl_list_max_height="250dp"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@+id/dl"
+        android:id="@+id/rv_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <ImageView
+        android:id="@+id/iv_kefu"
+        android:src="@mipmap/kefu"
+        android:scaleType="fitCenter"
+        android:layout_above="@+id/iv_dingzhi"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+
+        android:layout_width="65dp"
+        android:layout_height="65dp" />
+
+
+    <ImageView
+        android:id="@+id/iv_dingzhi"
+        android:src="@mipmap/dingzhi"
+
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/iv_kefu"
+        android:layout_alignStart="@+id/iv_kefu" />
 
 
 

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:paddingTop="8dp"
+
+    >
+    <View
+        android:background="#dedede"
+
+        android:layout_width="match_parent"
+        android:layout_height="0.5sp" />
+
+    <ImageView
+        android:id="@+id/iv_detail"
+        android:src="@mipmap/ic_launcher"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="15dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/tv_shopname"
+        android:layout_marginLeft="@dimen/item_detailleft"
+        android:textColor="#333333"
+        android:layout_marginTop="5dp"
+        android:layout_alignTop="@+id/iv_detail"
+        android:textSize="18sp"
+        android:layout_toRightOf="@+id/iv_detail"
+        android:text="出生2个月零9天的拉布拉多2只(1MM1DD)"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+
+
+    <TextView
+        android:id="@+id/tv_detailprice"
+        android:layout_toRightOf="@+id/iv_detail"
+        android:layout_alignBottom="@+id/iv_detail"
+        android:layout_marginLeft="@dimen/item_detailleft"
+        android:textColor="#f28943"
+        android:text="1999-3299"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tv_yuan"
+        android:layout_toRightOf="@+id/tv_detailprice"
+        android:layout_alignBottom="@+id/tv_detailprice"
+        android:text="元/只"
+        android:layout_marginLeft="1dp"
+        android:textColor="#f28943"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <ImageView
+        android:id="@+id/iv_tuan"
+        android:src="@mipmap/tuan"
+        android:layout_toRightOf="@+id/tv_yuan"
+        android:layout_alignBottom="@+id/tv_yuan"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="1dp"
+        android:layout_width="15dp"
+        android:layout_height="15dp" />
+    <ImageView
+        android:id="@+id/iv_huo"
+        android:src="@mipmap/huo"
+        android:layout_toRightOf="@+id/iv_tuan"
+        android:layout_alignBottom="@+id/tv_yuan"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="1dp"
+        android:layout_width="15dp"
+        android:layout_height="15dp" />
+    <TextView
+
+        android:textSize="12sp"
+        android:textColor="#999999"
+        android:layout_alignBottom="@+id/iv_huo"
+        android:layout_alignParentRight="true"
+        android:text="17.04.02"
+        android:layout_marginRight="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <View
+       android:background="#dedede"
+        android:layout_below="@id/iv_detail"
+        android:layout_width="match_parent"
+        android:layout_height="0.5sp" />
+
+
+
+
+</RelativeLayout>

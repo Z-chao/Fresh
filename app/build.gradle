@@ -5,7 +5,7 @@ android {
     buildToolsVersion "25.0.2"
     defaultConfig {
         applicationId "com.xpet.fresh_pet"
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
@@ -26,11 +26,11 @@ dependencies {
     })
 
     //rv 的引用
-    /* 百分比布局引用*/
-    /* 轮播图的引用*/
-    /*rv Adapter的引用*/
-    /*glide的引用*/
-    /* 悬浮图标的引用*/
+    // 百分比布局引用
+    //轮播图的引用
+    //rv Adapter的引用
+    //glide的引用
+    // 悬浮图标的引用
     
 
 
@@ -44,4 +44,6 @@ dependencies {
     compile 'com.android.support:support-v4:19.1.0'
     compile 'com.android.support:design:25.1.1'
     testCompile 'junit:junit:4.12'
+    compile 'com.lqr.dropdownLayout:library:1.0.0'
+
 }
