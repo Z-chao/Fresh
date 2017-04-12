@@ -24,22 +24,24 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:25.3.1'
-    compile 'com.android.support.constraint:constraint-layout:1.0.1'
-    testCompile 'junit:junit:4.12'
 
     //rv 的引用
-    compile 'com.android.support:recyclerview-v7:25.0.1'
     /* 百分比布局引用*/
-    compile 'com.zhy:percent-support-extends:1.1.1'
     /* 轮播图的引用*/
-    compile 'com.youth.banner:banner:1.4.9'
     /*rv Adapter的引用*/
-    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.9'
     /*glide的引用*/
+    /* 悬浮图标的引用*/
+    
+
+
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.1'
+    compile 'com.android.support:recyclerview-v7:25.0.1'
+    compile 'com.zhy:percent-support-extends:1.1.1'
+    compile 'com.youth.banner:banner:1.4.9'
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.9'
     compile 'com.github.bumptech.glide:glide:3.7.0'
     compile 'com.android.support:support-v4:19.1.0'
-    /* 悬浮图标的引用*/
     compile 'com.android.support:design:25.1.1'
-
+    testCompile 'junit:junit:4.12'
 }

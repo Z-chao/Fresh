@@ -1,10 +1,15 @@
 package com.xpet.fresh_pet.adapter;
 
 
+import android.app.ListActivity;
+import android.content.Context;
+import android.content.Intent;
+import android.view.View;
 import android.widget.ImageView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
+import com.xpet.fresh_pet.DetailActivity;
 import com.xpet.fresh_pet.R;
 
 
@@ -28,13 +33,13 @@ public class HomeAdapter extends BaseQuickAdapter<String,BaseViewHolder> {
         helper.setText(R.id.tv_home1, item);
         ImageView imageView = helper.getView(R.id.iv_home1);
 
-        /*imageView.setOnClickListener(new View.OnClickListener() {
+        imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Context context = view.getContext();
-                context.startActivity(new Intent(context, ListActivity.class));
+                context.startActivity(new Intent(context, DetailActivity.class));
             }
-        });*/
+        });
 
     }
 }
