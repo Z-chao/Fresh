@@ -1,7 +1,7 @@
 package com.xpet.fresh_pet.adapter;
 
 
-import android.app.ListActivity;
+
 import android.content.Context;
 import android.content.Intent;
 import android.view.View;
@@ -9,7 +9,7 @@ import android.widget.ImageView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
-import com.xpet.fresh_pet.DetailActivity;
+import com.xpet.fresh_pet.ListActivity1;
 import com.xpet.fresh_pet.R;
 
 
@@ -37,7 +37,7 @@ public class HomeAdapter extends BaseQuickAdapter<String,BaseViewHolder> {
             @Override
             public void onClick(View view) {
                 Context context = view.getContext();
-                context.startActivity(new Intent(context, DetailActivity.class));
+                context.startActivity(new Intent(context, ListActivity1.class));
             }
         });
 

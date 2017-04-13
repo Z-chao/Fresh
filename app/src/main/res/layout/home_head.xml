@@ -25,20 +25,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/banner_home"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
         android:layout_marginTop="30dp"
         android:orientation="horizontal">
 
         <EditText
+
             android:id="@+id/ed_homeseach"
             android:layout_width="0dp"
             android:layout_height="30dp"
             android:layout_marginLeft="10dp"
+            android:textCursorDrawable="@null"
             android:layout_weight="1"
             android:background="@mipmap/seachback"
-            android:hint="比熊犬"
+            android:hint=" 比熊犬"
             android:imeOptions="actionSearch"
             android:inputType="text"
-            android:singleLine="true" />
+            android:singleLine="true"
+            />
 
         <ImageView
             android:id="@+id/home_search"

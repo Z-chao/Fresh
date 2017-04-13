@@ -1,5 +1,6 @@
 package com.xpet.fresh_pet;
 
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +10,8 @@ import android.support.v7.widget.RecyclerView;
 import android.text.InputType;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -22,6 +25,8 @@ import com.youth.banner.BannerConfig;
 
 import java.util.ArrayList;
 
+import static android.view.KeyEvent.KEYCODE_ENTER;
+import static android.view.KeyEvent.KEYCODE_SEARCH;
 import static java.security.AccessController.getContext;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -72,6 +77,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ed_homeseach.setOnClickListener(this);
         iv_dingzhi.setOnClickListener(this);
         iv_kefu.setOnClickListener(this);
+        ed_homeseach.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
+                if (i == EditorInfo.IME_ACTION_SEARCH) {
+                    // 先隐藏键盘
+                    InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                    inputMethodManager.hideSoftInputFromWindow(ed_homeseach.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+                    //进行搜索操作的方法，在该方法中可以加入mEditSearchUser的非空判断
+                    Toast.makeText(MainActivity.this, "搜索隐藏", Toast.LENGTH_SHORT).show();
+                }
+
+                return false;
+            }
+        });
 
     }
 
@@ -79,7 +98,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ll_homesearch = (LinearLayout) mHeaderView.findViewById(R.id.ll_homesearch);
         banner_home = (Banner) mHeaderView.findViewById(R.id.banner_home);
         ed_homeseach = (EditText) mHeaderView.findViewById(R.id.ed_homeseach);
-        ed_homeseach.setInputType(InputType.TYPE_NULL);
+
 
         //轮播图中数据的填充
 
@@ -113,8 +132,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.iv_kefu:
                 //客服
-                String url="mqqwpa://im/chat?chat_type=wpa&uin=3209407802";
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+                try {
+                    String url = "mqqwpa://im/chat?chat_type=wpa&uin=3209407802";
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+                } catch (Exception error) {
+                    Toast.makeText(this, "请安装QQ", Toast.LENGTH_SHORT).show();
+                }
                 break;
         }
 
