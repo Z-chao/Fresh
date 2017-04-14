@@ -8,15 +8,6 @@
 
 
 
-    <!--下拉菜单-->
-    <com.lqr.dropdownLayout.LQRDropdownLayout
-        android:id="@+id/dl"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_below="@+id/ll_search"
-        app:ddl_item_text_gravity="center"
-        app:ddl_list_max_height="250dp"
-        />
 
     <android.support.v7.widget.RecyclerView
         android:layout_below="@+id/dl"

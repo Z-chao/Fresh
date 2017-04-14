@@ -26,7 +26,7 @@
         android:id="@+id/tv_shopname"
         android:layout_marginLeft="@dimen/item_detailleft"
         android:textColor="#333333"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="15dp"
         android:layout_alignTop="@+id/iv_detail"
         android:textSize="18sp"
         android:layout_toRightOf="@+id/iv_detail"
